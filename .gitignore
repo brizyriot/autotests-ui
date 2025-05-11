@@ -7,5 +7,5 @@ __pycache__/
 
 # IDE
 .idea/
-.iml
-.xml
+*.iml
+*.xml
