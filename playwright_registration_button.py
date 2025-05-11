@@ -20,5 +20,3 @@ with sync_playwright() as playwright:
     registration_password_input.fill('password')
 
     expect(registration_button).to_be_enabled()
-
-    page.wait_for_timeout(5000)
