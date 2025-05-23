@@ -11,3 +11,5 @@ __pycache__/
 *.xml
 
 browser-state.json
+
+.DS_store
