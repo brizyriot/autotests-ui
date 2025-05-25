@@ -35,6 +35,7 @@ class Settings(BaseSettings):
     test_data: TestData
     videos_dir: DirectoryPath
     tracing_dir: DirectoryPath
+    allure_results_dir: DirectoryPath
     browser_state_file: FilePath
 
     # Добавили метод initialize
@@ -43,18 +44,21 @@ class Settings(BaseSettings):
         # Указываем пути
         videos_dir = DirectoryPath("./videos")
         tracing_dir = DirectoryPath("./tracing")
+        allure_results_dir = DirectoryPath("./allure-results")
         browser_state_file = FilePath("browser-state.json")
 
         # Создаем директории, если они не существуют
         videos_dir.mkdir(exist_ok=True)  # Если директория существует, то игнорируем ошибку
         tracing_dir.mkdir(exist_ok=True)
         # Создаем файл состояния браузера, если его нет
+        allure_results_dir.mkdir(exist_ok=True)
         browser_state_file.touch(exist_ok=True)  # Если файл существует, то игнорируем ошибку
 
         # Возвращаем модель с инициализированными значениями
         return Settings(
             videos_dir=videos_dir,
             tracing_dir=tracing_dir,
+            allure_results_dir=allure_results_dir,
             browser_state_file=browser_state_file
         )
 
