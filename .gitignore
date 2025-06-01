@@ -1,15 +1,18 @@
-# Virtual environment
-venv/
-.venv/
+# pycharm
+.idea
 
-# Python
-__pycache__/
+# python
+.venv
+__pycache__
 
-# IDE
-.idea/
-*.iml
-*.xml
+# allure
+allure-results
+allure-report
 
-browser-state.json
+# testing artifacts
+*.html
+*.json
+videos
+tracing
 
-.DS_store
+.DS_Store
