@@ -19,7 +19,7 @@ To get started, clone the project repository using Git:
 
 ```bash
 git clone https://github.com/brizyriot/autotests-ui
-cd your-repo-name
+cd autotests-ui
 ```
 
 ### Create a Virtual Environment
